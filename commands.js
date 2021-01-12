@@ -9,7 +9,7 @@ const COMMANDS = {
         return "xcore killall";
     },
     setINXTVar: () => {
-        return "EXPORT STORJ_NETWORK=INXT"
+        return "export STORJ_NETWORK=INXT"
     }
 }
 

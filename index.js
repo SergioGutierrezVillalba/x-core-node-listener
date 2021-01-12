@@ -20,10 +20,15 @@ server.listen(port, hostname, () => {
             const nodeInfo = response.data;
             const { reputation } = nodeInfo;
             if(reputation < 1000) {
-                await exec(COMMANDS.stop());
-                await exec(COMMANDS.setINXTVar());
-                await exec(COMMANDS.startDaemon());
-                await exec(COMMANDS.startNode(nodeId, process.env.PATH_TO_CONFIG));
+                try {
+                    await exec(COMMANDS.stop());
+                    await exec(COMMANDS.setINXTVar());
+                    await exec(COMMANDS.startDaemon());
+                    await exec(COMMANDS.startNode(nodeId, process.env.PATH_TO_CONFIG));
+                } catch (e) {
+                    console.log(e.message); 
+                    process.exit(1);
+                }
             }
         })
     }, 10000);
