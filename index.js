@@ -15,8 +15,8 @@ server.listen(port, hostname, () => {
     const nodeId = process.env.NODE_ID;
     const url = `https://api.internxt.com/contacts/${nodeId}`;
     let timer = 60000 * 5; // 1min = 60000ms
-    setInterval(async () => {
-        axios.get(url).then((response) => {
+    setInterval(() => {
+        axios.get(url).then(async (response) => {
             const nodeInfo = response.data;
             const { reputation } = nodeInfo;
             if(reputation < 1000) {
