@@ -1,0 +1,24 @@
+{
+  "name": "x-core-node-listener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioGutierrezVillalba/x-core-node-listener.git"
+  },
+  "author": "Sergio Gutierrez Villalba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SergioGutierrezVillalba/x-core-node-listener/issues"
+  },
+  "homepage": "https://github.com/SergioGutierrezVillalba/x-core-node-listener#readme"
+}
